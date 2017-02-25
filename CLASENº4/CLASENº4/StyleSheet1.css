@@ -1,0 +1,21 @@
+﻿body {
+    background-color:royalblue;
+}
+a[href]{
+background-color:red;
+}
+a[href="#"]{
+background-color:aquamarine;
+}
+a[href="http://www.google.com.co"] {
+background-color:bisque;
+}
+a[href^="http"]{
+font-size:50px;
+}
+a[href$=".co"]{
+background-color:yellow;
+}
+a[href*="tiempo"]{
+text-decoration:none;
+}

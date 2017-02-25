@@ -1,0 +1,49 @@
+﻿body {
+}
+#cliente1 {
+border: solid green 1px
+}
+#cliente2 {
+border :solid orange 1px;
+}
+#cliente3 {
+border : solid red 1px;
+}
+#cliente4 {
+border :solid blue 1px;
+}
+
+table {
+border:solid yellow 2px;
+border-spacing:0px;
+}
+th {
+    text-transform:uppercase;
+border:solid green 1px;
+border-spacing:0 5px;
+border-collapse:separate;
+padding-right:10px;
+background-color:black;
+color:white;
+}
+
+.producto4 {
+background-color:orange;
+padding-right:10px;
+text-align:center
+}
+.producto1 {
+background-color:red;
+padding-right:10px;
+text-align:center
+}
+.producto2 {
+background-color:blue;
+padding-right:10px;
+text-align:center
+}
+.producto3 {
+background-color:green;
+padding-right:10px;
+text-align:center
+}

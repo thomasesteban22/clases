@@ -1,0 +1,36 @@
+﻿body {
+}
+#contenedor p:nth-child(2) {
+background-color:green;
+}
+#contenedor p:nth-of-type(2) {
+background-color:orange;
+}
+#letras li:only-child{
+ font-family:AngsanaUPC;
+ font-size:20px;
+}
+#letrastype span:only-of-type {
+background-color:red;
+}
+div:empty{
+background-color:yellowgreen;
+width:500px;
+height:500px;
+border:solid green 5px
+}
+p::first-letter{
+  color:red;
+  font-size:100px;
+ 
+}
+p::first-line {
+text-decoration:underline;
+}
+strong:after {
+content:"***"
+
+}
+strong:before {
+content:"***"
+}
