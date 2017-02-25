@@ -3,7 +3,8 @@
 }
 
 p {
-    color: green;
+    color: darkgray;
+    font-family:Tahoma;
 }
 
 #encabezado {
@@ -97,4 +98,19 @@ li{
    }
    .dropdown:hover .dropdown-content {
     display: block;
+}
+#propiedad {
+float:left;
+width :20%;
+margin-right:5%;
+}
+.foto {
+height:300px;
+width:300px;
+
+}
+h2 {
+font-family: 'PT Sans Narrow', sans-serif;
+text-transform:lowercase;
+
 }

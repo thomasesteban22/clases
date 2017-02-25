@@ -27,34 +27,34 @@
                 }
         ],
         propiedades: [{
-            tipoDePropiedad: "casa",
-            fotos: "imagen1.jpg",
+            tipoDePropiedad: "Casa",
+            fotos: "http://www.reinmobiliariasas.com/sites/default/files/styles/cardealer-car-browser-thumbnail/public/property-photos/IMG_1516.JPG?itok=-4n6UMeA",
             metrosCuadrados: "50.00",
             baños: "2",
             habitaciones: "3",
             garajes: "0",
-            tipoDeInmueble: "nuevo",
+            tipoDeInmueble: "Nuevo",
             precio: 2000000,
             sector: "Fontibon",
             direccion: "calle103f 26",
             propietario: { nombre: "Juan", numero: "9878909876" }
         },
         {
-            tipoDePropiedad: "apartamento",
-            fotos: "imagen1.jpg",
+            tipoDePropiedad: "Apartamento",
+            fotos: "http://www.reinmobiliariasas.com/sites/default/files/styles/cardealer-car-browser-thumbnail/public/property-photos/20170107_150747.jpg?itok=mybyQAOY",
             metrosCuadrados: "210.00",
             baños: "4",
             habitaciones: "5",
             garajes: "1",
-            tipoDeInmueble: "usado",
+            tipoDeInmueble: "Usado",
             precio: 450000000,
             sector: "Primavera Occidental",
-            direccion: "calle98 766",
+            direccion: "Calle98 766",
             propietario: { nombre: "pepe", numero: "4567890" }
         },
         {
             tipoDePropiedad: "local",
-            fotos: "imagen1.jpg",
+            fotos: "http://www.reinmobiliariasas.com/sites/default/files/styles/cardealer-car-browser-thumbnail/public/property-photos/20160713_123641.jpg?itok=7QPrqQHo",
             metrosCuadrados: "90.00",
             baños: "1",
             habitaciones: "1",
@@ -67,7 +67,7 @@
         },
         {
             tipoDePropiedad: "oficina",
-            fotos: "imagen1.jpg",
+            fotos: "http://www.reinmobiliariasas.com/sites/default/files/styles/cardealer-car-page-full/public/property-photos/Foto0041.jpg?itok=sDWwcRGp",
             metrosCuadrados: "30.00",
             baños: "1",
             habitaciones: "2",
@@ -108,9 +108,35 @@
     }
 
 var redessocialesElement = document.getElementById("encabezado");
-redessocialesElement.innerHTML +=  "<li class='redes'> <a> <img src='" + inmobiliaria.redessociales[3].imagen + "'></a></li>";
+redessocialesElement.innerHTML += "<li class='redes'> <a> <img src='" + inmobiliaria.redessociales[3].imagen + "'></a></li>";
 redessocialesElement.innerHTML += "<li class='redes'> <a> <img src='" + inmobiliaria.redessociales[2].imagen + "'></a></li>";
 redessocialesElement.innerHTML += "<li class='redes'> <a> <img src='" + inmobiliaria.redessociales[1].imagen + "'></a></li>";
 redessocialesElement.innerHTML += "<li class='redes'> <a> <img src='" + inmobiliaria.redessociales[0].imagen + "'></a></li>";
 
 redessocialesElement.innerHTML += "<li class='telefonos'id='telefonos'>Llamanos:<span>" + inmobiliaria.telefonos[0] + " " + inmobiliaria.telefonos[1] + " " + inmobiliaria.telefonos[2] + " " + inmobiliaria.telefonos[3] + "</span></li> ";
+
+var propiedadesElement = document.getElementById("propiedades");
+
+for (var i = 0; i < inmobiliaria.propiedades.length; i++) {
+    propiedadesElement.innerHTML += "<div id='propiedad'> <img class='foto' src='" + inmobiliaria.propiedades[i].fotos + "'>"
+    + "<h2>" + inmobiliaria.propiedades[i].sector + " " + inmobiliaria.propiedades[i].precio + "</h2>"
+    + "<p>  Baños:" + inmobiliaria.propiedades[i].baños + "</p>"
+    + "<p>  Habitaciones:" + inmobiliaria.propiedades[i].habitaciones + "</p>"
+ 
+    + agregarGarajes(inmobiliaria)
+ 
+    + "<p>  Tipo De Propiedad:" + inmobiliaria.propiedades[i].tipoDePropiedad + "</p>"
+    + "<p>  Tipo De Inmueble:" + inmobiliaria.propiedades[i].tipoDeInmueble + "</p>"
+    + "<p>  Metros Cuadrados:" + inmobiliaria.propiedades[i].metrosCuadrados + "</p>"
+    + "<p>  Direccion:" + inmobiliaria.propiedades[i].direccion + "</p>"
+    + "</div>";
+}
+
+function agregarGarajes(inm) {
+    if (inm.propiedades[i].garajes > 0) {
+        return "<p>  Garajes:" + inm.propiedades[i].garajes + "</p>";
+    }
+    else {
+        return "";
+    }
+}
